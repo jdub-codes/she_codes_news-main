@@ -1,0 +1,473 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap'); */
+
+:root {
+	--orange: #CC9900;
+	--yellow: #FF9900;
+	--purple: #663399;
+	--black: #333333;
+	--gray: #E9E5D9;
+}
+
+body {
+    background-color: var(--gray);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 0px solid #000;
+    background-color: var(--purple); */
+}
+
+img {
+    filter: grayscale(0%);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+#header-text {
+    flex-basis: 80%;
+    display: flex;
+}
+
+nav {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+a {
+    margin: 2px;
+    text-decoration: none;
+    color: #000;
+}
+
+a, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+.header{
+    border-bottom: 0px solid #000;
+    background-color: var(--purple);
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto&display=swap');
+
+:root {
+	--orange: #CC9900;
+	--yellow: #FF9900;
+	--purple: #663399;
+	--black: #333333;
+	--gray: #E9E5D9;
+}
+
+body {
+    background-color: rgb(240, 239, 239);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+img {
+    filter: none;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--pink);
+#Color add
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+#header-text {
+    flex-basis: 80%;
+    display: flex;
+}
+
+nav {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+a {
+    margin: 2px;
+    text-decoration: none;
+    color: #000;
+}
+
+a, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;  
+	scroll-behavior: smooth;
+    color: var(--black);
+} */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto&display=swap');
+
+:root {
+    --hover-blue: #8556a9;
+	--black: #111111;  
+    --white: #ffffff;  
+}
+
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Roboto', Arial, sans-serif;  
+	scroll-behavior: smooth;
+    color: var(--black);
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;  
+}
+
+header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Roboto', Arial, sans-serif;  
+    text-decoration: none;
+    font-size: 4rem;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto', Arial, sans-serif;  
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;  
+}
+
+#header-text {
+    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', Arial, sans-serif;  
+}
+
+.desktop-nav {
+    display:flex;     
+    width: 100%;
+}
+
+.desktop-nav a:hover {
+    list-style: none;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    content: "\f002";
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-top-icons {
+    list-style: none; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    font-size: 14px;
+}
+
+.login {
+    border-radius: 4px;
+}
+
+.register {
+    margin-right: 8px;
+    color: var(--white);
+    border: 1px solid var(--hover-blue);
+    background-color:rgb(130, 70, 175,0.8); 
+    border-radius: 4px;
+    width: 80px;
+    text-align: center;
+}
+
+.register:hover {
+    background-color:rgb(130, 70, 175,0.6); 
+    color: var(--white);
+}
+
+.register-wide {
+    margin-right: 8px;
+    color: var(--white);
+    border: 1px solid var(--hover-blue);
+    background-color:rgb(130, 70, 175,0.8); 
+    border-radius: 4px;
+    padding: 2px 16px 2px 16px;
+    text-align: center;
+}
+
+.register-wide:hover {
+    background-color:rgb(130, 70, 175,0.6); 
+    color: var(--white);
+}
+
+.centre {
+    text-align: center;
+}
+
+a {
+    margin: 2px;
+    text-decoration: none;
+    color:  var(--black);
+}
+
+a:hover {
+    color:  var(--hover-blue);
+}
+
+a, p {
+    font-family: 'Roboto', Arial, sans-serif;  
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: wrap;
+    width: 100%;
+    margin: auto;
+    border-top: 1px solid var(--black);
+}
+
+ul {
+    list-style: none; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#headline {
+    height: 20vh;
+    background-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+    ), url('/static/news/images/header_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y:60%; 
+    background-color: #111111;
+    width: 100%;
+}
+
+#headline h1 {
+    color: var(--white)
+}
+
+#news-categories {
+    width: 100%;
+}
+
+.category-list {
+    width:auto;
+    background-color:rgb(130, 70, 175, 0.8);     
+    border-radius: 4px;
+    justify-content: space-around;
+    height:30px;
+    align-items: center;    
+}
+
+.category-link { 
+    margin-right: 8px;
+    color: var(--white);
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    text-align: center;
+}
+
+.category-link:hover {
+    background-color: #B490CF;
+    color: var(--white);
+}
+
+.contact-link {
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.form-simple {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+}
+
+.form-simple ul {
+    display: block;
+}
+
+.form-simple-centre {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    width: 60%;
+}
+
+
+.grid-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+.grid-item {
+    padding-left: 64px;
+}
+
+.centre-align {
+    text-align: center;
+}
+
+.label-values a {
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-style: solid;
+}
+
+#welcome {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+#story-add {
+    border-radius: 4px;
+    align-items: center;
+}
+
+#name {
+    width: 60%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.button-simple {
+    margin-right: 8px;
+    background-color: var(--hover-blue);
+    color: var(--white);
+    border: 1px solid var(--hover-blue);
+    border-radius: 4px;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+#story-add:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: var(--black);
+}
+
+.register-wide-new {
+    margin-right: 8px;
+    color: var(--white);
+    border: 1px solid var(--hover-blue);
+    background-color:rgb(130, 70, 175,0.8); 
+    border-radius: 4px;
+    padding: 4px 16px 4px 16px;
+    text-align: center;
+}
+
+.register-wide-new:hover {
+    background-color:rgb(130, 70, 175,0.6); 
+    color: var(--white);
+} */

@@ -1,0 +1,29 @@
+<!-- users/templates/users/createAccount.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-simple">
+
+    <h2>View Account</h2>
+    {% if request.user.is_authenticated %}        
+    <div class="grid-form">
+        <div class="grid-item"><h4>Username:</h4></div>
+        <div class="grid-item"><h4>{{ user.username }}</h4></div>
+        <div class="grid-item"><p>Email:</p></div>
+        <div class="grid-item"><p>{{ user.email }}</p></div>
+        <div class="grid-item"><p>First Name:</p></div>
+        <div class="grid-item"><p>{{ user.first_name }}</p></div>    
+        <div class="grid-item"><p>Last Name:</p></div>
+        <div class="grid-item"><p>{{ user.last_name }}</p></div>        
+    </div>   
+    <br>
+    <p class="centre-align"><a href="{% url 'users:changeAccount' %}" class="register-wide">Edit Details </a></p>
+    {% else %}
+    <h2>You are not logged in</h2>
+    <h4 class="centre-align">Please <a href="{% url 'login' %}" class="register-wide">login</a> or <a href="{% url 'users:createAccount' %}" class="register-wide">sign up</a> to edit content</h4>
+
+    {% endif %}
+</div>
+
+{% endblock %}

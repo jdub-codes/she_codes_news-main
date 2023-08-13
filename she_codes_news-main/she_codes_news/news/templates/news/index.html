@@ -1,0 +1,60 @@
+    {% extends "base.html" %}
+    {% load static %}
+    
+    
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+    {% endblock %}    
+
+
+    {% block content %}
+    <div id="story-add">
+        <a href="{% url 'news:newStory' %}" class="register-wide-new">Write a new story</a> 
+    </div>
+    <div class="search">
+        <form action="{% url 'news:searchresults' %}" method="get" id="search">    
+        <input name="search" type="text">
+        <input type="submit" value="Search" class="register">
+    </form>
+    </div>
+    <div class="header-block">
+    <div id="news-categories">
+        <h4>
+        {% for category, value in category_choices %}
+        <a href="{% url 'news:searchresults' %}?category={{category}}" class="category-link">{{ category }}</a>
+        {% endfor %}
+        </h4>
+    </div>
+    </div>  
+    {% if request.user.is_authenticated %}
+        <div id="name">
+    </div>       
+    {% endif  %}
+    <br>
+
+    <h2>Latest News</h2>
+    <div id="all-content">
+        <div id="latest-stories">
+            {% if latest_stories %}
+                <!-- <p>Test output variable latest_stories{{ latest_stories }}</p> -->
+                {% for story in latest_stories %}
+                    <!-- <p>{{ story.title }}</p> 
+                    <p>{{ story.pub_date }}</p> -->
+                    {% include "./storyCard.html" with story=story position=forloop.counter %}
+                {% endfor %}
+            {% else %}
+                <p>No stories are available.</p>
+            {% endif %}
+        </div>
+        <div id="all-stories">
+            {% if all_stories %}
+                {% for story in all_stories %}
+                    <!-- <p>{{ story.title }}</p> -->
+                    {% include "./storyCard.html" with story=story %}
+                {% endfor %}
+            {% else %}
+                <p>No stories are available.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

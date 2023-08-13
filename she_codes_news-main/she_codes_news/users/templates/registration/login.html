@@ -1,0 +1,19 @@
+<!-- users/templates/registration/login.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-simple-centre">
+<h2>Login</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="register">Login</button>
+</form>
+<br>
+Don't have an account? 
+<br>
+<br>
+<p><a href="{% url 'users:createAccount' %}" class="register-wide">Sign up</a></p>
+</div>
+{% endblock %}
